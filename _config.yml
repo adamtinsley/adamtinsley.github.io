@@ -1,6 +1,6 @@
 # Main configs
-#url: http://snesplayer.com
-url: http://localhost:4000
+url: http://snesplayer.com
+#url: http://localhost:4000
 title: SNES Player
 author: Adam Tinsley
 description: Playing every Super Nintendo game
