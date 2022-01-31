@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+__________                               ______ ______ __         _____                   ______
+___  ____/____ ___________ ____ ____ ___ ___   \   / /_(_)__ ____ __/ /_ ____ ___ _____ _____/ /_____
+__  /____ _  / / /_  __  /_  _ \ _  '__/ __  /\ \ / / / /_  '_  /__  __/_  _ \ _ '__  /_  __  /_  __ \
+______  / / /_/ / / /_/ / /  __/ / /     _  /  \   / / / / / / /  / /   /  __/ / / / / / /_/ / / /_/ /
+/______/  \____/ / ____/  \___/ /_/      /_/    \_/ /_/ /_/ /_/  /_/    \___/ /_/ /_/  \____/ /_____/ 
+                /_/       
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="author" content="{{ site.author }}">
+  {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="screen, projection">
+  
+  <!-- Genericons (http://genericons.com/) -->
+  <link href="{{ site.url }}/fonts/genericons.css" rel="stylesheet" type="text/css">
+    
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ site.url }}/functions.js"></script>
+  {% if site.google_analytics_tracking_id %}<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.google_analytics_tracking_id }}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>{% endif %}
+</head>

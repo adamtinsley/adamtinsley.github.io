@@ -1,0 +1,537 @@
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Generic Classes
+ * 3.0 - Basic Structure
+ * 4.0 - Header
+ *   4.1 - Navigation
+ * 5.0 - Content
+ *   5.1 - Entry Header
+ *   5.2 - Entry Meta
+ *   5.3 - Entry Content
+ *   5.4 - Post/Paging Navigation
+ *   5.5 - Archive
+ * 6.0 - Footer
+ * 7.0 - Media Queries
+ * 8.0 - Print
+ * ----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 1.0 - Reset
+ * ----------------------------------------------------------------------------
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, .hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, .hgroup, main, nav, section,
+summary, h1, h2, h3, h4, h5, h6 {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #fff;
+  color: #444;
+  font-family: 'Courier New', monospace;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 16px;
+  font-size: 1.6rem; 
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+/*  font-family: 'Bitter', serif; */
+  margin: 10px 0;
+  text-rendering: optimizelegibility;
+}
+
+h1 {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  margin: 0 0 .5em 0;
+}
+
+h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin: 1.75em 0 .75em 0;
+}
+
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.5;
+  margin: 1em 0;
+}
+
+em {
+  font-style: italic;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+hr {
+  border: 1px solid #ededed;
+  margin: .5em 0;
+}
+
+img {
+  border: none;
+  display: block;
+  padding: 0;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-bottom: 1.5em;
+  margin-left: 18px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-bottom: 1.5em;
+  margin-left: 18px;
+}
+
+ol li, ul li {
+  line-height: 1.75em;
+}
+
+table {
+	width: 100%;
+-webkit-border-horizontal-spacing: 0px;
+-webkit-border-vertical-spacing: 0px;
+border-collapse: collapse;
+}
+
+th {
+	font-weight: bold;
+	text-align: left;
+}
+
+th, td {
+	border: 1px solid #a2a9b1;
+	padding: 0.2em 0.4em;
+}
+
+/**
+ * 2.0 - Generic Classes
+ * ----------------------------------------------------------------------------
+ */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
+/**
+ * 3.0 - Basic Structure
+ * ----------------------------------------------------------------------------
+ */
+
+.site {
+  background: #fff;
+  margin: 48px auto;
+  padding: 0 40px;
+  width: 560px;
+}
+
+
+/**
+ * 4.0 - Header
+ * ----------------------------------------------------------------------------
+ */
+
+.hgroup {
+  padding: 40px 0;
+}
+
+.site-title {
+  display: inline-block;
+  font-size: 32px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.site-title a {
+  color: #333;
+  display: block;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.site-subtitle {
+  font: 300 italic 18px "Source Sans Pro", Helvetica, sans-serif;
+}
+
+
+/**
+ *   4.1 - Navigation
+ * ----------------------------------------------------------------------------
+ */
+
+nav {
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+
+nav ul {
+  height: 40px;
+  margin: 0 auto;
+  padding: 0;
+  width: 600px;
+}
+
+nav ul li {
+  display: inline;
+  float: left;
+  font-size: 12px;
+}
+
+nav ul li.current {
+  font-weight: 700;
+}
+
+nav a {
+  color: #444;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+  margin-right: 30px;
+  text-transform: uppercase;
+}
+
+nav a:visited {
+  color: #444;
+}
+
+nav a:active,
+nav a:hover {
+  color: #444;
+}
+
+
+/**
+ * 5.0 - Content
+ * ----------------------------------------------------------------------------
+ */
+
+article {
+  border-bottom: 4px double #ededed;
+  padding: 48px 0;
+/*  position: relative;*/
+}
+
+article.no-border {
+  border-bottom: none;
+}
+
+section {
+  padding: 20px 0;
+}
+
+
+/**
+ *   5.1 - Entry Header
+ * ----------------------------------------------------------------------------
+ */
+
+.entry-title {
+  /* Post title styles */
+}
+
+.entry-title a {
+  /* Post title link color */
+}
+
+
+/**
+ *   5.2 - Entry Meta
+ * ----------------------------------------------------------------------------
+ */
+
+.entry-meta {
+  line-height: 23px;
+  font-size: 12px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.entry-meta a {
+  color: #767676;
+}
+
+.date {
+  margin-right: 20px;
+}
+
+.date:before {
+  content: '\f303';
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font: normal 16px/1 Genericons;
+  vertical-align: middle;
+  padding: 0 2px 2px 0;
+}
+
+.comments:before {
+  content: '\f300';
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font: normal 16px/1 Genericons;
+  vertical-align: middle;
+  padding: 0 2px 2px 0;
+}
+
+.tweet {
+  vertical-align: middle;
+}
+
+
+/**
+ *   5.3 - Entry Content
+ * ----------------------------------------------------------------------------
+ */
+
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 14px;
+}
+
+pre {
+  border: solid 1px #ededed;
+  line-height: 18px;
+  margin: 1em 0;
+  padding: 2px 0 2px 10px;
+  white-space: pre;
+  overflow-x: auto;
+  word-break: inherit;
+  word-wrap: inherit;
+  line-height: 1.75;
+}
+
+.linenos {
+  counter-reset: line-numbering;
+}
+
+.linenos .line::before {
+  content: counter(line-numbering);
+  counter-increment: line-numbering;
+  width: 16px;
+  text-align: right;
+  display: inline-block;
+  color: #ccc;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #ededed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/*
+.linenos .line:first-of-type::before {
+  padding-top: 10px;
+}
+
+.linenos .line:last-of-type::before {
+  padding-bottom: 10px;
+}
+*/
+
+.footnotes {
+  font-size: 13px;
+  line-height: 16px;
+  color: #666;
+
+  p {
+    margin-bottom: 6px;
+  }
+}
+
+/* Fancy stacked photo background for images */
+
+.stacked {
+  background-color: #f7f7f7;
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  -webkit-box-shadow: -1px 2px 5px rgba(0,0,0,0.5);
+  -moz-box-shadow: -1px 2px 5px rgba(0,0,0,0.5);
+  box-shadow: -1px 2px 5px rgba(0,0,0,0.5);
+  -webkit-transform: rotate(-1.4deg);
+  -moz-transform: rotate(-1.4deg);
+  transform: rotate(-1.4deg);
+  -webkit-backface-visibility: hidden;
+}
+
+
+/**
+ *   5.4 - Post/Paging Navigation
+ * ----------------------------------------------------------------------------
+ */
+
+.pagination {
+  height: 14px;
+  padding: 50px 0;
+}
+
+.pagination a {
+  display: block;
+  line-height: 1;
+}
+
+.pagination .prev {
+  float: left;
+}
+
+.pagination .prev-disabled {
+  display: none;
+}
+
+.pagination .next {
+  float: right;
+}
+
+.pagination .next-disabled {
+  display: none;
+}
+
+
+/**
+ *   5.5 - Archive
+ * ----------------------------------------------------------------------------
+ */
+
+.archive {
+  margin-bottom: 21px;
+}
+
+.archive h3 {
+  margin-top: 1.5em;
+}
+
+.archive ul {
+  margin-bottom: 0;
+}
+
+
+/**
+ * 6.0 - Footer
+ * ----------------------------------------------------------------------------
+ */
+
+footer {
+  border-top: 1px solid #ededed;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+
+/**
+ * 7.0 - Media Queries
+ * ----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 8.0 - Print
+ * ----------------------------------------------------------------------------
+ */
+

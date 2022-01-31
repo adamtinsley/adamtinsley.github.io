@@ -1,0 +1,14 @@
+---
+layout: page
+title: About
+---
+
+In 2022 Adam Tinsley decided to stop wasting time reading the news and scrolling through social media and actually do something important: acquire, document, and play every Super Nintendo game released for retail sale in North America.
+
+Now I know what you're thinking. That sounds stunning and very brave. Heroic even. Am I a hero? Perhaps, but that's not for me to say.
+
+On these pages of the interweb I will document my quest. It won't be easy and there will be no shortcuts. None of these multi-game carts or Johnny-come-lately classic mini editions. I will be fighting the masses to collect each and every original cart on e-bay.
+
+Then, I will record the game play footage with my new Game Capture device that works about 65% of the time. The other times it quits unexpectedly or just doesn't save the video. You can watch this footage on my YouTube page or check back here and watch the list of linked games grow and grow.
+
+Stay tuned...
